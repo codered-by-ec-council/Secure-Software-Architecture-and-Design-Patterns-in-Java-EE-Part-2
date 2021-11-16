@@ -6,4 +6,6 @@ Secure Software Architecture and Design Patterns in Java EE - Part 2, by EC-Coun
   identity-store
 ## Please use the follwoing code project for Section 5 of this course:
   security-context
+  
+## Make sure you uncomment the relevant code (if commented) when following demos of each section
 
