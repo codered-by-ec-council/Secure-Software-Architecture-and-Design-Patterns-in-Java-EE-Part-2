@@ -1,0 +1,65 @@
+dn: dc=test,dc=com
+objectclass: top
+objectclass: organization
+o: test
+
+dn: ou=caller,dc=test,dc=com
+objectclass: top
+objectclass: organizationalUnit
+ou: caller
+
+dn: ou=group,dc=test,dc=com
+objectclass: top
+objectclass: organizationalUnit
+ou: group
+
+dn: uid=david,ou=caller,dc=test,dc=com
+objectclass: top
+objectclass: person
+uid: david
+cn: David
+sn: James
+userPassword: david
+
+dn: uid=ed,ou=caller,dc=test,dc=com
+objectclass: top
+objectclass: person
+uid: ed
+cn: Eddie
+sn: James
+userPassword: ed
+
+dn: uid=michael,ou=caller,dc=test,dc=com
+objectclass: top
+objectclass: person
+uid: michael
+cn: Michael
+sn: James
+userPassword: michael
+
+dn: uid=sam,ou=caller,dc=test,dc=com
+objectclass: top
+objectclass: person
+uid: sam
+cn: Sam
+sn: James
+userPassword: sam
+
+dn: cn=manager,ou=group,dc=test,dc=com
+objectclass: top
+objectclass: groupOfNames
+cn: manager
+member: uid=david,ou=caller,dc=test,dc=com
+
+dn: cn=employee,ou=group,dc=test,dc=com
+objectclass: top
+objectclass: groupOfNames
+cn: employee
+member: uid=david,ou=caller,dc=test,dc=com
+member: uid=ed,ou=caller,dc=test,dc=com
+
+dn: cn=admin,ou=group,dc=test,dc=com
+objectclass: top
+objectclass: groupOfNames
+cn: admin
+member: uid=sam,ou=caller,dc=test,dc=com

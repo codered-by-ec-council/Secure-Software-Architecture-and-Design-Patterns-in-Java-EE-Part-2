@@ -8,6 +8,7 @@ package p1;
 import javax.enterprise.context.ApplicationScoped;
 import javax.security.enterprise.authentication.mechanism.http.BasicAuthenticationMechanismDefinition;
 import javax.security.enterprise.identitystore.DatabaseIdentityStoreDefinition;
+import javax.security.enterprise.identitystore.LdapIdentityStoreDefinition;
 
 /**
  *
@@ -20,6 +21,13 @@ import javax.security.enterprise.identitystore.DatabaseIdentityStoreDefinition;
 //    callerQuery = "select password from users where username = ?",
 //    groupsQuery = "select GROUPNAME from groups where username = ?"
 //)
+
+@LdapIdentityStoreDefinition(
+    url = "ldap://localhost:10389",
+    callerBaseDn = "ou=caller,dc=test,dc=com",
+    groupSearchBase = "ou=group,dc=test,dc=com"
+)
+
 
 @ApplicationScoped
 public class ApplicationConfig {
